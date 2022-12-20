@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="freshMeat" type ="fType" ></xs:element>
+    
+    
+    <xs:complexType name="fType">
+        <xs:sequence>
+            <xs:element name="person" type="pType"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    
+    <xs:complexType name="pType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"></xs:element>
+            <xs:element name="sex" type="xs:string"></xs:element>
+            <xs:element name="hairColor" type="xs:string"></xs:element>
+            <xs:element name="placeOfBirth" type="xs:string"></xs:element>
+            <xs:element name="subjects" type="sType"></xs:element>
+            <xs:element name="possibleCountries" type="xs:string"></xs:element>
+            <xs:element name="possibleStates" type="xs:string"></xs:element>
+            <xs:element name="publication" type="xs:dateTime"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="sType">
+        <xs:sequence>
+            <xs:element name="subject" type="xs:string"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+ 
+</xs:schema>
+

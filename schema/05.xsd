@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="maleKidnappers">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="person" type="pType"  minOccurs="1" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+   
+    <xs:complexType name="pType">
+        <xs:sequence>
+            <xs:element name="subjects" type="sType" minOccurs="0" maxOccurs="1"></xs:element>
+            <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+            <xs:element name="sex" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+            <xs:element name="publication" type="xs:dateTime" minOccurs="1" maxOccurs="1" ></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="sType">
+        <xs:sequence>
+            <xs:element name="subject" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

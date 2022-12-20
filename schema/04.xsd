@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" >
+    <xs:element name="groupingByHairColor">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="hairColor" type="hcType" maxOccurs="unbounded" minOccurs="1"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    
+    <xs:complexType name="hcType">
+        <xs:attribute name="haircolor" type="xs:string" use="required"></xs:attribute>
+        <xs:attribute name="number" type="xs:integer" use="required"></xs:attribute>
+    </xs:complexType>
+</xs:schema>
+
